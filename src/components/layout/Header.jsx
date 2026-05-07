@@ -8,7 +8,7 @@ function Header() {
             <FaUserCircle />
           </div>
           <div className="text-3xl">
-            <p>Evolução Pessoal!</p>
+            <p>Bom dia, Natan!</p>
           </div>
         </div>
         <div className="flex justify-between items-center mt-5 text-gray-500">
