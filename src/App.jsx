@@ -8,7 +8,7 @@ import NotFound from "./components/pages/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="flex flex-col justify-center h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="flex flex-col justify-center h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-indigo-900">
       <BrowserRouter>
         <Header />
         <Routes>
