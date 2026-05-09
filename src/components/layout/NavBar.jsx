@@ -6,29 +6,29 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="flex justify-center mt-5 text-white bg-transparent rounded-xl shadow fixed bottom-0 left-0 w-full">
-      <ul className="flex items-center gap-10 text-2xl p-4 px-20 rounded-3xl shadow-xl">
+    <nav className="flex justify-center mt-5 text-white  rounded-xl shadow fixed bottom-0 left-0 w-full">
+      <ul className="flex items-center gap-10 text-2xl p-4 px-20 rounded-3xl shadow-xl bg-gray-800/50">
         <li>
           <Link className="flex flex-col items-center gap-1" to="/">
-            <FaHome className="text-2xl hover:text-green-400 transition" />
+            <FaHome className="text-2xl hover:text-purple-600 transition" />
             <span className="text-sm text-gray-400">Inicio</span>
           </Link>
         </li>
         <li>
           <Link className="flex flex-col items-center gap-1" to="/progress">
-            <GiProgression className="text-2xl hover:text-yellow-400 transition"/>
+            <GiProgression className="text-2xl hover:text-purple-600 transition"/>
             <span className="text-sm text-gray-400">Progresso</span>
           </Link>
         </li>
         <li>
           <Link className="flex flex-col items-center gap-1" to="/targets">
-            <TbTargetArrow className="text-2xl hover:text-red-400 transition" />
+            <TbTargetArrow className="text-2xl hover:text-purple-600 transition" />
             <span className="text-sm text-gray-400">Metas</span>
           </Link>
         </li>
         <li>
           <Link className="flex flex-col items-center gap-1" to="/profile">
-            <FaUser className="text-2xl hover:text-blue-400 transition" />
+            <FaUser className="text-2xl hover:text-purple-600 transition" />
             <span className="text-sm text-gray-400">Perfil</span>
           </Link>
         </li>

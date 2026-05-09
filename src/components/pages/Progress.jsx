@@ -7,7 +7,6 @@ function Progress() {
         <p className="text-4xl">
           <GiProgression />
         </p>
-        <p>Em Breve! Página de progresso em desenvolvimento</p>
       </div>
     </div>
   );

@@ -1,14 +1,13 @@
-import { FaUser } from "react-icons/fa";
+import { FaLightbulb, FaUser } from "react-icons/fa";
+import ProfileHeader from "../profile/ProfileHeader";
+import BarXp from "../profile/BarXp";
+import StatCard from "../profile/StatCard";
 
 function Profile() {
   return (
     <div className="flex flex-col justify-center items-center bg-transparent h-screen">
-      <div className="flex flex-col justify-center items-center text-gray-600">
-        <p className="text-4xl">
-          <FaUser />
-        </p>
-        <p>Em Breve! Página de perfil em desenvolvimento</p>
-      </div>
+      <ProfileHeader />
+      <StatCard icon={FaLightbulb} text="Xp total" value="1000" />
     </div>
   );
 }

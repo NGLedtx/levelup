@@ -1,9 +1,9 @@
 import { AiFillFire } from "react-icons/ai";
 import Formatdate from "../utils/FormatDate";
-function Header() {
+function PageHeader() {
   return (
     <div className="flex justify-center">
-      <div className="flex justify-center flex-col text-white p-5  w-full max-w-md transparent rounded-xl shadow-2xl p-4-b">
+      <div className="flex justify-center flex-col text-white p-5  w-full max-w-md bg-gray-800/50 rounded-xl shadow-2xl p-4-b">
         <div className="flex  items-center gap-7 ">
           <div className="text-3xl">
             <img src="/mago1.png" className="rounded-full max-w-40" />
@@ -34,4 +34,4 @@ function Header() {
     </div>
   );
 }
-export default Header;
+export default PageHeader;
