@@ -5,7 +5,7 @@ import ArchievementsCard from "./AchievementsCard";
 
 function Achievements() {
   return (
-    <div className="flex flex-col rounded-xl p-5 text-white max-w-md w-full min-h-screen">
+    <div className="flex flex-col rounded-xl p-5 text-white max-w-md w-full">
       <h1 className="text-2xl font-bold mt-3">Conquistas</h1>
       <div className="grid grid-cols-3  gap-4 mt-4 bg-gray-800/50 p-4 rounded-lg">
         <ArchievementsCard

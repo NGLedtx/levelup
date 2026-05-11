@@ -7,7 +7,7 @@ import Achievements from "../profile/Achievements";
 
 function Profile() {
   return (
-    <div className="flex flex-col items-center min-h-screen">
+    <div className="flex flex-col items-center min-h-screen mb-10">
       <ProfileHeader type="Mago" />
       <div className="flex gap-5 mt-5 justify-center items-center">
         <StatCard icon={<FaBolt className="text-yellow-500"/>} text="Xp Total" value="1000" />
