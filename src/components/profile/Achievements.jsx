@@ -1,7 +1,7 @@
 import { FaBolt } from "react-icons/fa";
 import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
 import { FaUser } from "react-icons/fa";
-import ArchievementsCard from "./ArchievementsCard";
+import ArchievementsCard from "./AchievementsCard";
 
 function Achievements() {
   return (
