@@ -31,6 +31,7 @@ function Login() {
       "user",
       JSON.stringify(formData)
     )
+    navigate("/person-class")
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 flex flex-col items-center justify-center px-4 relative overflow-hidden text-white">

@@ -6,6 +6,7 @@ import Targets from "./components/pages/Targets";
 import Profile from "./components/pages/Profile";
 import NotFound from "./components/pages/NotFound";
 import Login from "./components/pages/Login";
+import PersonClass from "./components/pages/PersonClass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/person-class" element={<PersonClass />} />
 
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
