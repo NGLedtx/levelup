@@ -1,13 +1,27 @@
 import warriorImg from "../../assets/characters/warrior/warriors.jpg";
+import warriorMenImg from "../../assets/characters/warrior/warriorMen.jpg";
+import warriorWomanImg from "../../assets/characters/warrior/warriorWoman.jpg";
+
 import mageImg from "../../assets/characters/mage/wizards.png";
+import mageMenImg from "../../assets/characters/mage/wizzardMen.png";
+import mageWomanImg from "../../assets/characters/mage/wizzardWoman.png";
+
 import archerImg from "../../assets/characters/archer/archers.png";
+import archerMenImg from "../../assets/characters/archer/archerMen.png";
+import archerWomanImg from "../../assets/characters/archer/archerWoman.png";
+
+
 import healerImg from "../../assets/characters/healer/healers.png";
+import healerMenImg from "../../assets/characters/healer/healerMen.png";
+import healerWomanImg from "../../assets/characters/healer/healerWoman.png";
 
 export const classRpg = [
   {
     id: 1,
     name: "Guerreiro",
     image: warriorImg,
+    imageMen: warriorMenImg,
+    imageWoman: warriorWomanImg,
     color: "bg-gradient-to-br from-black via-red-950 to-orange-950",
     textColor: "bg-gradient-to-r from-red-400 via-rose-400 to-red-600",
     advantage:
@@ -23,6 +37,8 @@ export const classRpg = [
     id: 2,
     name: "Mago",
     image: mageImg,
+    imageMen: mageMenImg,
+    imageWoman: mageWomanImg,
     color: "bg-gradient-to-br from-black via-purple-900 to-indigo-900",
     textColor: "bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-500",
     advantage: "+10% de XP em hábitos de estudo, leitura e aprendizado",
@@ -37,6 +53,8 @@ export const classRpg = [
     id: 3,
     name: "Arqueiro",
     image: archerImg,
+    imageMen: archerMenImg,
+    imageWoman: archerWomanImg,
     color: "bg-gradient-to-br from-black via-blue-900 to-cyan-900",
     textColor: "bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500",
     advantage: "+10% de XP em hábitos de foco, disciplina e agilidade mental",
@@ -51,6 +69,8 @@ export const classRpg = [
     id: 4,
     name: "Curandeiro",
     image: healerImg,
+    imageMen: healerMenImg,
+    imageWoman: healerWomanImg,
     color: "bg-gradient-to-br from-black via-emerald-900 to-teal-900",
     textColor: "bg-gradient-to-r from-emerald-400 via-green-400 to-teal-500",
     advantage: "+10% de XP em hábitos de saúde, autocuidado e bem-estar",

@@ -4,11 +4,18 @@ import CharacterCard from "../character/CharacterCard";
 import CarouselControl from "../character/CarouselControl";
 import CharacterStats from "../character/CharacterStats";
 import CharacterAdvantage from "../character/CharacterAdvantage";
+import Modal from "../layout/Modal";
+import CharacterChoice from "../character/CharacterChoice";
 
 function PersonClass() {
   const user = JSON.parse(localStorage.getItem("user"));
   const [currentClass, setCurrentClass] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const currentCharacter = classRpg[currentClass];
+
+  function togglePersonModal(){
+    setModalOpen(!modalOpen);
+  }
   function handleNext() {
     setCurrentClass((prev) => (prev === classRpg.length - 1 ? 0 : prev + 1));
   }
@@ -39,9 +46,18 @@ function PersonClass() {
           handlePrevious={handlePrevious}
         />
         <CharacterAdvantage currentCharacter={currentCharacter} />
-        <button className="font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-gray-900 p-4 rounded-lg w-80">
+        <button className="font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-gray-900 p-4 rounded-lg w-80" onClick={()=> setModalOpen(true)}>
           Escolher {currentCharacter.name}
         </button>
+        {modalOpen && (
+          <div>
+            <Modal
+            onClose={togglePersonModal}
+            currentCharacter={currentCharacter}
+            children={<CharacterChoice currentCharacter={currentCharacter}/>}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

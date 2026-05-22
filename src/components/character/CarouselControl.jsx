@@ -7,7 +7,7 @@ function CarouselControl({ currentCharacter, handleNext, handlePrevious }) {
       </button>
       <h2
         className={`
-          flex justify-center text-3xl ${currentCharacter.textColor} bg-clip-text text-transparent font-semibold w-40 border-b-amber-400 border-b-2`}
+          flex justify-center text-3xl ${currentCharacter.textColor}/20 bg-clip-text text-transparent font-semibold w-40 border-b-amber-400 border-b-2`}
       >
         {currentCharacter.name}
       </h2>
