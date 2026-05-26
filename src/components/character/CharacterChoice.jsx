@@ -1,7 +1,20 @@
 import { useState } from "react";
-
+import { Navigate, useNavigate } from "react-router-dom";
 function CharacterChoice({ currentCharacter }) {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const navigate = useNavigate();
+  function handleChooseCharacter() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const updateUser = {
+      ...user,
+      gender: selectedCharacter,
+      class: currentCharacter.name,
+      color: currentCharacter.color,
+      image: selectedCharacter === "male" ? currentCharacter.imageMen : currentCharacter.imageWoman
+    };
+    localStorage.setItem("user", JSON.stringify(updateUser));
+    navigate("/onboarding")
+  }
   return (
     <div className={`flex flex-col justify-center items-center gap-10 `}>
       <h1 className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent text-2xl font-semibold">
@@ -21,7 +34,9 @@ function CharacterChoice({ currentCharacter }) {
               className="rounded-full w-40"
               src={currentCharacter.imageMen}
             />
-            <p className=" bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">Masculino</p>
+            <p className=" bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+              Masculino
+            </p>
           </button>
         </div>
         <div className="flex flex-col justify-center items-center">
@@ -37,19 +52,22 @@ function CharacterChoice({ currentCharacter }) {
               className="rounded-full w-40"
               src={currentCharacter.imageWoman}
             />
-            <p className=" bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">Feminino</p>
+            <p className=" bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+              Feminino
+            </p>
           </button>
         </div>
       </div>
       <div>
         <button
           className={`font-bold text-gray-900 p-4 rounded-lg w-80
-            ${selectedCharacter
+            ${
+              selectedCharacter
                 ? "bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 transition-all duration-300"
                 : "bg-gradient-to-r from-gray-600 via-slate-500 to-gray-700 cursor-not-allowed opacity-80"
             }`}
-          onClick={() => setModalOpen(true)}
           disabled={!selectedCharacter}
+          onClick={handleChooseCharacter}
         >
           Escolher!
         </button>
