@@ -1,4 +1,4 @@
-import QuestionCard from "./QuestionCard";
+import QuestionCard from "../onboarding/QuestionCard";
 
 function Onboarding(){
     return(
