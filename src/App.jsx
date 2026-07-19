@@ -8,7 +8,7 @@ import NotFound from "./components/pages/NotFound";
 import Login from "./components/pages/Login";
 import PersonClass from "./components/pages/PersonClass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Onboarding from "./components/onboarding/Onboarding";
+import Onboarding from "./components/pages/Onboarding";
 function App() {
   return (
     <div className="flex flex-col justify-center bg-gradient-to-br from-purple-900 via-gray-900 to-indigo-900">

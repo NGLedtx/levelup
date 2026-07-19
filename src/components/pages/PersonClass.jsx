@@ -13,7 +13,7 @@ function PersonClass() {
   const [modalOpen, setModalOpen] = useState(false);
   const currentCharacter = classRpg[currentClass];
 
-  function togglePersonModal(){
+  function togglePersonModal() {
     setModalOpen(!modalOpen);
   }
   function handleNext() {
@@ -46,15 +46,18 @@ function PersonClass() {
           handlePrevious={handlePrevious}
         />
         <CharacterAdvantage currentCharacter={currentCharacter} />
-        <button className="font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-gray-900 p-4 rounded-lg w-80" onClick={()=> setModalOpen(true)}>
+        <button
+          className="font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-gray-900 p-4 rounded-lg w-80"
+          onClick={() => setModalOpen(true)}
+        >
           Escolher {currentCharacter.name}
         </button>
         {modalOpen && (
           <div>
             <Modal
-            onClose={togglePersonModal}
-            currentCharacter={currentCharacter}
-            children={<CharacterChoice currentCharacter={currentCharacter}/>}
+              onClose={togglePersonModal}
+              currentCharacter={currentCharacter}
+              children={<CharacterChoice currentCharacter={currentCharacter} />}
             />
           </div>
         )}
